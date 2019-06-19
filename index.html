@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mikä sää?</title>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.1.0/tablesort.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.1.0/sorts/tablesort.number.min.js"></script>
+    <style>
+        .active, .addtofav:hover{
+            color: yellow;
+            cursor: pointer;
+        }
+
+        th:hover {
+            color: rgb(66,139,202);
+            cursor: pointer;
+        }
+
+        tr:hover {
+            color: gray;
+        }
+
+        .table {
+            animation-name: fade;
+            animation-duration: 1s;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center text-primary">
+        <i class="fa fa-cloud"></i>Mikä sää?
+        <input class="form-control text-center mt-3" id="input" type="text" placeholder="Etsi kaupunki...">
+        <table class="table table-striped" id="table">
+            <thead class="h4">
+                <tr>
+                    <th>Kaupunki <i class="fa fa-sort"></i></th>
+                    <th>Lämpötila <i class="fa fa-sort"></i></th>
+                    <th>Ilmankosteus <i class="fa fa-sort"></i></th>
+                    <th>Tuuli <i class="fa fa-sort"></i></th>
+                </tr>
+            </thead>
+            <tbody id="weathertable" class="h4"></tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        new Tablesort(document.getElementById('table'));
+    </script>
+</body>
+</html>
