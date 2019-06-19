@@ -44,17 +44,19 @@
         <h1 class="text-center text-primary">
         <i class="fa fa-cloud"></i>Mikä sää?
         <input class="form-control text-center mt-3" id="input" type="text" placeholder="Etsi kaupunki...">
-        <table class="table table-striped" id="table">
-            <thead class="h4">
-                <tr>
-                    <th>Kaupunki <i class="fa fa-sort"></i></th>
-                    <th>Lämpötila <i class="fa fa-sort"></i></th>
-                    <th>Ilmankosteus <i class="fa fa-sort"></i></th>
-                    <th>Tuuli <i class="fa fa-sort"></i></th>
-                </tr>
-            </thead>
-            <tbody id="weathertable" class="h4"></tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped" id="table">
+                <thead class="h4">
+                    <tr>
+                        <th>Kaupunki <i class="fa fa-sort"></i></th>
+                        <th>Lämpötila <i class="fa fa-sort"></i></th>
+                        <th>Ilmankosteus <i class="fa fa-sort"></i></th>
+                        <th>Tuuli <i class="fa fa-sort"></i></th>
+                    </tr>
+                </thead>
+                <tbody id="weathertable" class="h4"></tbody>
+            </table>
+        </div>
     </div>
     <script src="app.js"></script>
     <script>
