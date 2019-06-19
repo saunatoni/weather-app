@@ -1,6 +1,6 @@
 function getWeather(city){
     const apikey = '63e2483f717974c4522b2bd0740c0e16';
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
     fetch(url)
     .then((response) => response.json())
     .then((JSONdata) => {
@@ -15,7 +15,7 @@ function getWeather(city){
 function drawTable(city, temp, humidity, wind, icon) {
     let list = document.querySelector('#weathertable');
     const row = document.createElement('tr');
-    let iconURL = `http://openweathermap.org/img/w/${icon}.png`;
+    let iconURL = `https://openweathermap.org/img/w/${icon}.png`;
     let favorites = getFavorites();
     if (favorites.includes(city)) {
         row.innerHTML = `
